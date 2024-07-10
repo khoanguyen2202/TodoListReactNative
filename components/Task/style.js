@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
+import color from "../../contains/color";
 
 const styles = StyleSheet.create({
- 
   item: {
     flexDirection: "row",
     backgroundColor: "#fff",
@@ -17,9 +17,14 @@ const styles = StyleSheet.create({
     width: 48,
     height: 36,
     borderRadius: 10,
-    backgroundColor: "#53d6f2",
     alignItems: "center",
     justifyContent: "center",
+  },
+  even: {
+    backgroundColor: color.green,
+  },
+  odd: {
+    backgroundColor: color.second,
   },
   number: {
     fontSize: 16,

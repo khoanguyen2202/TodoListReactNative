@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   KeyboardAvoidingView,
   Platform,
+  Keyboard,
 } from "react-native";
 import React, { useState } from "react";
 import styles from "./style";
@@ -15,7 +16,9 @@ const Form = (props) => {
       alert("Bạn vui lòng nhập công việc!");
       return false;
     }
-    props.onAddTask();
+    props.onAddTask(task);
+    setTask("");
+    Keyboard.dismiss();
   };
   return (
     <KeyboardAvoidingView
@@ -24,6 +27,7 @@ const Form = (props) => {
       keyboardVerticalOffset={10}
     >
       <TextInput
+        value={task}
         style={styles.input}
         placeholder="Your Task"
         onChangeText={(text) => setTask(text)}
