@@ -15,7 +15,7 @@ const Form = (props) => {
       alert("Bạn vui lòng nhập công việc!");
       return false;
     }
-    props.handleAddTask(task);
+    props.onAddTask();
   };
   return (
     <KeyboardAvoidingView
